@@ -1,36 +1,84 @@
-# Hiring Bias Analysis
+Hiring Bias Analysis
 
-## Overview
+Overview
+
 This repository investigates racial bias in hiring decisions using machine learning models. It examines whether applicant names influence callback rates and evaluates fairness-aware algorithms.
 
-## System Requirements
+System Requirements
 
-### Local Setup
+Local Setup
+
 Ensure you have the following installed:
-- Python 3.9+
-- Jupyter Notebook
-- Required dependencies from `requirements.txt`
+
+Python 3.9+
+
+Jupyter Notebook
+
+Required dependencies listed below.
 
 Run the following commands:
-
-
-# Clone the repository
 ```bash
+# Clone the repository
 git clone https://github.com/Rising-Stars-by-Sunshine/hiring-bias-analysis.git
 cd hiring-bias-analysis
-```
 
 # Create a virtual environment
-```bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-```
 
 # Install dependencies
-```bash
 pip install -r requirements.txt
-```
+
 # Run Jupyter Notebook
-```bash
 jupyter notebook
 ```
+
+Repository Structure
+
+data/ - Contains datasets and metadata.
+
+code/ - Contains Jupyter Notebooks and preprocessing scripts.
+
+Data Description
+
+The dataset includes:
+
+Applicant Names: First and last names used in the job application.
+
+Race/Ethnicity: Perceived race based on applicant name.
+
+Job Category: Type of job applied for.
+
+Callback: Whether the applicant received a response.
+
+For a complete list of variables, see data/data_dictionary.md.
+
+Running the Analysis
+
+To perform exploratory data analysis (EDA), open and execute code/eda_notebook.ipynb in Jupyter Notebook. This notebook:
+
+Loads the dataset
+
+Summarizes key statistics
+
+Visualizes hiring biases using data distributions
+
+For preprocessing, run code/preprocess.py:
+```bash
+python code/preprocess.py
+```
+This script cleans and encodes categorical data, preparing it for model training.
+
+Dependencies (requirements.txt)
+```bash
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+shap
+jupyter
+```
+License
+
+This project is released under the MIT License. See LICENSE for details.
